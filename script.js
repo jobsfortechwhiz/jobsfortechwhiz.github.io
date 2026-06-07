@@ -1,3 +1,7 @@
+let allPosts = [];
+let currentPage = 1;
+const postsPerPage = 9;
+let currentCategory = "All";
 document
 .getElementById("search")
 .addEventListener("input",function(){
@@ -32,43 +36,17 @@ console.log(
       "Posts Returned:",
       data.feed.entry.length
     );
-    const posts = data.feed.entry;
+ allPosts = data.feed.entry;
+//console.log(allPosts.length);
+renderCategories();
+renderPosts();
 
-    const container =
-    document.getElementById("posts-container");
+    // const container =
+    // document.getElementById("posts-container");
 
-    container.innerHTML = "";
+    // container.innerHTML = "";
 
     posts.forEach(post => {
-//console.log(post.content.$t);
-//console.log(post.media$thumbnail);
-let labels = "";
-
-if(post.category){
-
-    labels =
-    post.category
-    .map(cat =>
-      `<span class="tag">${cat.term}</span>`
-    )
-    .join("");
-}
-        const title = post.title.$t;
-
-        const content =
-        post.content.$t
-        .replace(/<[^>]+>/g,'');
-
-        const summary =
-        content.substring(0,200);
-
-        const postId =
-post.id.$t.split("-").pop();
-let thumbnail = "";
-
-if (post.media$thumbnail) {
-    thumbnail = post.media$thumbnail.url;
-}
 
 const imgMatch =
 post.content.$t.match(/<img[^>]+src="([^">]+)"/i);
@@ -80,25 +58,135 @@ if(imgMatch){
 
     thumbnail = imgMatch[1];
 }
-// replaced const postUrl =
-// post.link.find(
-//     l => l.rel === "alternate"
-// ).href; with   const postId =
-// post.id.$t.split("-").pop(); as i don't want blogger url on clicking read more instead 
-// i want that after loading content from blogger site it should come with my 
-// current site url not of blogger.
+
 console.log("TITLE:", title);
 console.log("THUMB:", thumbnail);
-       container.innerHTML += `
+
+    });
+
+}
+//  changing  href="${postUrl}" with   href="post.html?url=${encodedUrl}"> 
+// so that on clicking read more blogger url will come as a query parameter ? 
+function renderCategories(){
+
+    const categories = new Set(["All"]);
+
+    allPosts.forEach(post => {
+
+        if(post.category){
+
+            post.category.forEach(cat => {
+
+                categories.add(cat.term);
+
+            });
+
+        }
+
+    });
+
+    const container =
+    document.getElementById("category-filters");
+
+    container.innerHTML = "";
+
+    categories.forEach(cat => {
+
+        container.innerHTML += `
+        <button
+        class="cat-btn"
+        onclick="filterCategory('${cat}')">
+
+        ${cat}
+
+        </button>
+        `;
+
+    });
+
+}
+function filterCategory(category){
+
+    currentCategory = category;
+    currentPage = 1;
+
+    renderPosts();
+
+}
+function renderPosts(){
+
+    const container =
+    document.getElementById("posts-container");
+
+    container.innerHTML = "";
+
+    let filteredPosts =
+    allPosts;
+
+    if(currentCategory !== "All"){
+
+        filteredPosts =
+        allPosts.filter(post =>
+
+            post.category &&
+            post.category.some(
+                cat => cat.term === currentCategory
+            )
+
+        );
+
+    }
+
+    const start =
+    (currentPage - 1) * postsPerPage;
+
+    const end =
+    start + postsPerPage;
+
+    const pagePosts =
+    filteredPosts.slice(start,end);
+
+    pagePosts.forEach(post => {
+
+       const title = post.title.$t;
+
+        const content =
+        post.content.$t
+        .replace(/<[^>]+>/g,'');
+
+        const summary =
+        content.substring(0,200);
+
+        const postId =
+post.id.$t.split("-").pop();
+let thumbnail = "";
+let labels = "";
+
+if(post.category){
+
+    labels = post.category
+    .map(cat =>
+      `<span class="tag">${cat.term}</span>`
+    )
+    .join("");
+}
+
+if(post.media$thumbnail){
+    thumbnail = post.media$thumbnail.url;
+}
+
+container.innerHTML += `
 <div class="post-card">
 
-  ${thumbnail ? `
-<img
-src="${thumbnail}"
-alt="${title}"
-class="post-thumb">
-` : ""}
-${labels}
+    ${thumbnail ? `
+    <img
+    src="${thumbnail}"
+    alt="${title}"
+    class="post-thumb">
+    ` : ""}
+
+    ${labels}
+
     <h2>${title}</h2>
 
     <p>${summary}...</p>
@@ -110,11 +198,49 @@ ${labels}
 
 </div>
 `;
+
+    });
+
+    renderPagination(filteredPosts.length);
+
+}
+function renderPagination(totalPosts){
+
+    const pages =
+    Math.ceil(totalPosts/postsPerPage);
+
+    const container =
+    document.getElementById("pagination");
+
+    container.innerHTML = "";
+
+    for(let i=1;i<=pages;i++){
+
+        container.innerHTML += `
+        <button
+        class="page-btn"
+        onclick="changePage(${i})">
+
+        ${i}
+
+        </button>
+        `;
+
+    }
+
+}
+function changePage(page){
+
+    currentPage = page;
+
+    renderPosts();
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
     });
 
 }
-//  changing  href="${postUrl}" with   href="post.html?url=${encodedUrl}"> 
-// so that on clicking read more blogger url will come as a query parameter ? 
 const script =
 document.createElement("script");
 

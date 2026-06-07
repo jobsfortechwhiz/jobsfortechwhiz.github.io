@@ -109,3 +109,26 @@ header{
     font-size:22px;
     font-weight:bold;
 }
+
+#category-filters{
+    text-align:center;
+    margin:20px;
+}
+
+.cat-btn,
+.page-btn{
+
+    padding:8px 15px;
+    margin:5px;
+
+    border:none;
+    border-radius:20px;
+
+    cursor:pointer;
+}
+
+.cat-btn:hover,
+.page-btn:hover{
+
+    opacity:.8;
+}
