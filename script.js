@@ -293,9 +293,14 @@ if(searchTerm){
 .replace(/[^a-z0-9]+/g,"-")
 .replace(/^-|-$/g,"");
 
-        const content =
-        post.content.$t
-        .replace(/<[^>]+>/g,'');
+       const content =
+post.content.$t
+
+.replace(/<style[\s\S]*?<\/style>/gi,'')
+
+.replace(/<script[\s\S]*?<\/script>/gi,'')
+
+.replace(/<[^>]+>/g,'');
 
         const summary =
         content.substring(0,200);

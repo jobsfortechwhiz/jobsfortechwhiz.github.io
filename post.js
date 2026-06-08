@@ -10,8 +10,7 @@ window.location.search
 console.log("POST JS VERSION 999");
 function loadPost(data){
 
-
-   const post =
+const post =
 data.feed.entry.find(item => {
 
 const postSlug =
@@ -23,11 +22,23 @@ item.title.$t
 return postSlug === slug;
 
 });
+    if(!post){
+
+        document.getElementById(
+            "post-content"
+        ).innerHTML =
+        "<h2>Post not found</h2>";
+
+        return;
+    }
+
+  
 
 const summary =
 post.content.$t
 .replace(/<[^>]+>/g,'')
 .substring(0,160);
+
 
 const metaDesc =
 document.querySelector(
@@ -46,37 +57,37 @@ const currentCategories =
 post.category
 ? post.category.map(cat => cat.term)
 : [];
-    if(!post){
 
-        document.getElementById(
-            "post-content"
-        ).innerHTML =
-        "<h2>Post not found</h2>";
-
-        return;
-    }
-
+ 
     document.title =
 post.title.$t +
 " | JobsForTechWhiz";
     console.log(post.content.$t);
 
-    let content = post.content.$t;
-
+   let content = post.content.$t;
+console.log(content.substring(0,5000));
+content = content.replace(
+    /<style[\s\S]*?<\/style>/i,
+    ""
+);
     content = content.replace(
         /src="\/\//g,
         'src="https://'
     );
+// content = content.replace(
+//     /<div class="my-top-header">[\s\S]*?<\/div>/i,
+//     ""
+// );
 
-content = content.replace(
-/color\s*:\s*black/gi,
-'color:white'
-);
+// content = content.replace(
+// /color\s*:\s*black/gi,
+// 'color:white'
+// );
 
-content = content.replace(
-/color\s*:\s*#000000/gi,
-'color:white'
-);
+// content = content.replace(
+// /color\s*:\s*#000000/gi,
+// 'color:white'
+// );
 
 const relatedPosts =
 data.feed.entry.filter(item => {
@@ -111,36 +122,49 @@ console.log("Related:", relatedPosts.length);
 console.log(relatedPosts);
     document.title =
     post.title.$t;
-let category =
-currentCategories.length
-? currentCategories[0]
-: "General";
 
-  document.getElementById(
-"post-content"
+document.getElementById(
+    "post-content"
 ).innerHTML = `
-
-<div class="breadcrumb">
-
-<a href="index.html">
-Home
-</a>
-
->
-
-<span>${category}</span>
-
->
-
-<span>${post.title.$t}</span>
-
-</div>
-
-<h1>${post.title.$t}</h1>
-
-<div>${content}</div>
-
+    <h1>${post.title.$t}</h1>
+    <div>${content}</div>
 `;
+const oldHeader =
+document.querySelector(".my-top-header");
+
+if(oldHeader){
+    oldHeader.remove();
+}
+const wrapper =
+document.querySelector("#post-content > div");
+
+const sidebar =
+wrapper.querySelector(".sidebar");
+
+const main =
+wrapper.querySelector(".main");
+
+const faq =
+wrapper.querySelector(".faq-sect");
+
+if(sidebar && main){
+
+    const layout =
+    document.createElement("div");
+
+    layout.className =
+    "custom-layout";
+
+    wrapper.prepend(layout);
+
+    layout.appendChild(sidebar);
+    layout.appendChild(main);
+
+    if(faq){
+        wrapper.appendChild(faq);
+    }
+}
+   "post-content"
     const relatedContainer =
 document.getElementById(
     "related-posts"
