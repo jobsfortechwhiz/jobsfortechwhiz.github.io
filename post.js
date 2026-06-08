@@ -129,6 +129,29 @@ document.getElementById(
     <h1>${post.title.$t}</h1>
     <div>${content}</div>
 `;
+
+setTimeout(() => {
+
+    document
+    .querySelectorAll('#post-content script')
+    .forEach(oldScript => {
+
+        const s =
+        document.createElement('script');
+
+        if(oldScript.src){
+            s.src = oldScript.src;
+        }else{
+            s.textContent =
+            oldScript.textContent;
+        }
+
+        document.body.appendChild(s);
+    });
+
+}, 100);
+
+
 const oldHeader =
 document.querySelector(".my-top-header");
 
@@ -139,7 +162,7 @@ const wrapper =
 document.querySelector("#post-content > div");
 
 const sidebar =
-wrapper.querySelector(".sidebar");
+wrapper.querySelector(".sidebar"); /* to fix sidebar ,main ,faq */
 
 const main =
 wrapper.querySelector(".main");
