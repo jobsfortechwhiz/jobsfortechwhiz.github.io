@@ -678,18 +678,40 @@ height:calc(100vh - 40px) !important;
 #pdfBtn b{
      color:inherit !important; 
 }
-#image-grid{
-    display:grid !important;
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    gap:20px !important;
+#image-grid,
+.image-grid{
+
+display:grid !important;
+
+grid-template-columns:
+repeat(2,minmax(0,1fr)) !important;
+
+gap:20px !important;
+
+width:100% !important;
 }
 
-.image-card{
-    width:100% !important;
-    display:flex !important;
-    flex-direction:column !important;
+#image-grid .image-card,
+.image-grid .image-card{
+
+display:flex !important;
+flex-direction:column !important;
+
+width:100% !important;
+
+box-sizing:border-box;
 }
 
 .image-box{
     width:100% !important;
+}
+@media(max-width:768px){
+
+#image-grid,
+.image-grid{
+
+grid-template-columns:1fr !important;
+
+}
+
 }
