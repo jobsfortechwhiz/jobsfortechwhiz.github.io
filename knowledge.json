@@ -1,0 +1,24 @@
+{
+  "site": "JobsForTechWhiz",
+
+  "resources": [
+    {
+      "name": "Java Interview PDFs",
+      "category": "Java"
+    },
+    {
+      "name": "Spring Boot Interview PDFs",
+      "category": "Spring Boot"
+    },
+    {
+      "name": "Android Interview PDFs",
+      "category": "Android"
+    }
+  ],
+
+  "payment_info": "Users can purchase resources online.",
+
+  "download_info": "PDF download becomes available after successful payment.",
+
+  "support_email": "priyankanigam25041999@gmail.com"
+}
