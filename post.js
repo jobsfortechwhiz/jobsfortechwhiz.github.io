@@ -129,6 +129,10 @@ document.getElementById(
     <h1>${post.title.$t}</h1>
     <div>${content}</div>
 `;  */
+const slug =
+new URLSearchParams(
+window.location.search
+).get("slug");
 const bloggerUrl =
 post.link.find(
     l =>
@@ -136,7 +140,7 @@ post.link.find(
     l.href.includes("interviewprepforinsiders.blogspot.com")
 )?.href;
 const quizUrl =
-`https://interviewprepforinsiders.blogspot.com/p/quiz.html?url=${encodeURIComponent(bloggerUrl)}`;
+"https://interviewprepforinsiders.blogspot.com/p/quiz.html?url=https://interviewprepforinsiders.blogspot.com/2026/05/terraform-automation-tool.html";
 document.getElementById(
     "post-content"
 ).innerHTML = `
