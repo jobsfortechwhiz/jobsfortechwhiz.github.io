@@ -1,121 +1,50 @@
-<style>
-#chatbot-btn{
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-border-radius:50%;
+
+<div id="jftw-chat-btn">
+💬
+</div>
+
+<div id="jftw-chat-window">
+
+<div
+style="
+padding:15px;
 background:#ff9800;
 color:white;
-font-size:28px;
+font-weight:bold;
+">
+JobsForTechWhiz Assistant
+</div>
+
+<div id="jftw-messages">
+</div>
+
+<div
+style="
 display:flex;
-justify-content:center;
-align-items:center;
-cursor:pointer;
-box-shadow:0 4px 15px rgba(0,0,0,.3);
-z-index:99999;
-}
-
-#chatbox{
-position:fixed;
-right:20px;
-bottom:90px;
-width:350px;
-height:500px;
-background:white;
-border-radius:15px;
-display:none;
-flex-direction:column;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-z-index:99999;
-}
-
-#messages{
-flex:1;
-overflow:auto;
 padding:10px;
-}
+border-top:1px solid #eee;
+">
 
-</style>
-<div id="chatbot-btn">💬</div>
+<input
+id="jftw-input"
+placeholder="Ask a question..."
+style="
+flex:1;
+padding:10px;
+">
 
-<div id="chatbox">
-
-    <div id="chat-header">
-        JobsForTechWhiz Assistant
-    </div>
-
-    <div id="messages"></div>
-
-    <div id="chat-footer">
-
-        <input
-            id="chat-input"
-            placeholder="Ask anything..."
-        >
-
-        <button id="chat-send">
-            Send
-        </button>
-
-    </div>
+<button
+id="jftw-send">
+Send
+</button>
 
 </div>
-<script>
-    const CHAT_URL =
-"https://script.google.com/macros/s/AKfycbyfH_KRrc70_jw8BiAava6JgNKEGFWC8UusSTnbUL69H7jileleX4V8XGmnCdPBDaaT/exec";
 
-$("#chatbot-btn").click(function(){
+</div>
+<link
+rel="stylesheet"
+href="/css/chatbot.css">
 
-  $("#chatbox").toggle();
-
-});
-
-$("#chat-send").click(function(){
-
-  const msg =
-    $("#chat-input").val();
-
-  if(!msg) return;
-
-  $("#messages").append(
-    `<div class='user'>
-      ${msg}
-    </div>`
-  );
-
-  $("#chat-input").val("");
-
-  $.ajax({
-
-    url: CHAT_URL,
-
-    method: "POST",
-
-    contentType:
-      "application/json",
-
-    data: JSON.stringify({
-      message: msg
-    }),
-
-    success: function(res){
-
-      const data =
-        typeof res === "string"
-          ? JSON.parse(res)
-          : res;
-
-      $("#messages").append(
-        `<div class='bot'>
-          ${data.reply}
-        </div>`
-      );
-
-    }
-
-  });
-
-});
+<script
+src="/js/chatbot.js">
 </script>
