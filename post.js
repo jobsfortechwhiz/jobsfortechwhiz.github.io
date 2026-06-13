@@ -122,12 +122,42 @@ console.log("Related:", relatedPosts.length);
 console.log(relatedPosts);
     document.title =
     post.title.$t;
-
+/*
 document.getElementById(
     "post-content"
 ).innerHTML = `
     <h1>${post.title.$t}</h1>
     <div>${content}</div>
+`;  */
+const bloggerUrl =
+post.link.find(
+    l => l.rel === "alternate"
+).href;
+
+const quizUrl =
+`page.html?slug=quiz&url=${encodeURIComponent(bloggerUrl)}`;
+
+document.getElementById(
+    "post-content"
+).innerHTML = `
+
+<div class="post-actions">
+
+<a
+id="quizBtn"
+class="quiz-btn"
+href="${quizUrl}"
+target="_blank">
+
+📝 Take Quiz
+
+</a>
+
+</div>
+
+<h1>${post.title.$t}</h1>
+
+<div>${content}</div>
 `;
 
 setTimeout(() => {
