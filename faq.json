@@ -1,0 +1,77 @@
+[
+  {
+"keywords":[
+"payment",
+"pay",
+"upi",
+"card",
+"purchase"
+],
+
+"answer":
+"Payments can be made online using the payment options available on the website."
+},
+
+{
+"keywords":[
+"download",
+"pdf",
+"get pdf"
+],
+
+"answer":
+"After successful payment, the PDF download option becomes available immediately."
+},
+
+{
+"keywords":[
+"java"
+],
+
+"answer":
+"We provide Java interview preparation resources and PDFs."
+},
+
+{
+  "keywords": [
+    "spring boot pdf",
+    "spring boot notes"
+  ],
+  "answer": "Spring Boot interview PDFs and resources are available on the website."
+},
+
+{
+"keywords":[
+"android"
+],
+
+"answer":
+"We provide Android interview preparation resources."
+},
+
+{
+"keywords":[
+"contact",
+"support",
+"help"
+],
+
+"answer":
+"Please contact support through the contact details available on the website."
+},
+{
+  "keywords": [
+    "email",
+    "contact email"
+  ],
+  "answer": "Please use the contact details provided on the website."
+},
+{
+  "keywords": [
+    "refund",
+    "money back",
+    "cancel order"
+  ],
+  "answer": "Please contact support regarding refund requests."
+}
+]
