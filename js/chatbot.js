@@ -50,67 +50,38 @@ document.addEventListener("DOMContentLoaded", function () {
             `<div class="user-msg">${msg}</div>`;
 
         input.value = "";
-/*
-        fetch(CHAT_API, {
 
-            method: "POST",
+      fetch(CHAT_API, {
+    method: "POST",
+    body: JSON.stringify({
+        message: msg
+    }),
+    headers: {
+        "Content-Type": "text/plain"
+    }
+})
+.then(response => response.json())
+.then(data => {
 
-            headers: {
-                "Content-Type":
-                "application/json"
-            },
-
-            body: JSON.stringify({
-                message: msg
-            })
-
-        })
-        .then(r => r.json())
-        .then(data => {
-console.log("Response:", data);
-            messages.innerHTML +=
-                `<div class="bot-msg">${data.reply}</div>`;
-
-            messages.scrollTop =
-                messages.scrollHeight;
-
-        })
-        .catch(() => {
-
-            messages.innerHTML +=
-                `<div class="bot-msg">Service unavailable.</div>`;
-
-        }); */
-
-       $.ajax({
-
-  url: CHAT_API,
-
-  type: "POST",
-
-  data: {
-    message: msg
-  },
-
-  success: function(data){
-
-      messages.innerHTML +=
-      `<div class="bot-msg">
+    messages.innerHTML +=
+    `<div class="bot-msg">
         ${data.reply}
-      </div>`;
+    </div>`;
 
-  },
+})
+.catch(error => {
 
-  error: function(){
+    console.error(error);
 
-      messages.innerHTML +=
-      `<div class="bot-msg">
+    messages.innerHTML +=
+    `<div class="bot-msg">
         Service unavailable.
-      </div>`;
-
-  }
+    </div>`;
 
 });
+console.log("Sending:", msg);
+console.log("$ =", $);
+console.log("jQuery =", jQuery);
     }
 
 });
