@@ -1474,6 +1474,40 @@ if(selected){
 }
 </script>
 <div id="chatbot-container"></div>
+
+<link
+rel="stylesheet"
+href="css/chatbot.css">
+<script src="/JobsforTechWhiz.github.io/js/chatbot.js"></script>
+<script>
+fetch('/JobsforTechWhiz.github.io/widget.html')
+.then(r => {
+    console.log("status:", r.status);
+    return r.text();
+})
+.then(html => {
+
+    console.log("widget loaded");
+
+    document.getElementById(
+        'chatbot-container'
+    ).innerHTML = html;
+
+    console.log(
+        document.getElementById(
+            'jftw-chat-btn'
+        )
+    );
+
+    initChatbot();
+
+})
+.catch(err => {
+    console.error(err);
+});
+</script>
+
+
 <!--
 <script>
 fetch("widget.html")
@@ -1487,7 +1521,7 @@ fetch("widget.html")
   .innerHTML = html;
 
 });
-</script> -->
+</script> 
 <div id="jftw-chat-btn">
 💬
 </div>
@@ -1537,6 +1571,7 @@ href="css/chatbot.css">
 <script
 src="js/chatbot.js">
 </script>
+-->
 <footer class="site-footer">
 
     <div class="footer-content">

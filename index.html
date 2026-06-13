@@ -126,6 +126,41 @@ Loading Posts...
 
 
 <div id="chatbot-container"></div>
+
+<link
+rel="stylesheet"
+href="chatbot.css">
+<script src="/JobsforTechWhiz.github.io/js/chatbot.js"></script> 
+<script>
+fetch('/JobsforTechWhiz.github.io/widget.html')
+.then(r => {
+    console.log("status:", r.status);
+    return r.text();
+}) 
+.then(html => {
+
+    console.log("widget loaded");
+
+    document.getElementById(
+        'chatbot-container'
+    ).innerHTML = html;
+
+    console.log(
+        document.getElementById(
+            'jftw-chat-btn'
+        )
+    );
+
+    initChatbot();
+
+})
+.catch(err => {
+    console.error(err);
+});
+</script>
+
+
+<!--
 <div id="jftw-chat-btn">
 💬
 </div>
@@ -175,7 +210,7 @@ href="css/chatbot.css">
 <script
 src="js/chatbot.js">
 </script>
-<!--
+
 <script>
 fetch("widget.html")
 .then(r => r.text())
