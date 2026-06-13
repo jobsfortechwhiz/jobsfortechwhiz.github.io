@@ -29,9 +29,9 @@ z-index:999999;
 }
 
 #jftw-chat-window{
-
+ flex-direction:column;
 position:fixed;
-
+ display:none;
 bottom:95px;
 right:20px;
 

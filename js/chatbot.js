@@ -1,96 +1,87 @@
 const CHAT_API =
-"https://script.google.com/macros/s/AKfycbxs4_UAGEdcqWfVUjfDeTs-IRPhnIvR8poqkkZ4qnCny5QaFaTbvQXM3kHONplHUek";
+"https://script.google.com/macros/s/AKfycbxs4_UAGEdcqWfVUjfDeTs-IRPhnIvR8poqkkZ4qnCny5QaFaTbvQXM3kHONplHUek/exec";
 
-$(document).on(
-"click",
-"#jftw-send",
-function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-    const msg =
-    $("#jftw-input")
-    .val()
-    .trim();
+    const btn =
+        document.getElementById("jftw-chat-btn");
 
-    if(!msg) return;
+    const win =
+        document.getElementById("jftw-chat-window");
 
-    $("#jftw-messages")
-    .append(`
-      <div class="user-msg">
-        ${msg}
-      </div>
-    `);
+    const sendBtn =
+        document.getElementById("jftw-send");
 
-    $("#jftw-input")
-    .val("");
+    const input =
+        document.getElementById("jftw-input");
 
-    $("#jftw-messages")
-    .append(`
-      <div id="typing">
-        Assistant is typing...
-      </div>
-    `);
+    const messages =
+        document.getElementById("jftw-messages");
 
-    $.ajax({
+    btn.addEventListener("click", function () {
 
-      url: CHAT_API,
-
-      method: "POST",
-
-      contentType:
-      "application/json",
-
-      data:
-      JSON.stringify({
-        message: msg
-      }),
-
-      success: function(res){
-
-          $("#typing").remove();
-
-          const data =
-          typeof res === "string"
-          ? JSON.parse(res)
-          : res;
-
-          $("#jftw-messages")
-          .append(`
-             <div class="bot-msg">
-                ${data.reply}
-             </div>
-          `);
-
-          $("#jftw-messages")
-          .scrollTop(
-             $("#jftw-messages")[0]
-             .scrollHeight
-          );
-
-      },
-
-      error:function(){
-
-          $("#typing").remove();
-
-          $("#jftw-messages")
-          .append(`
-            <div class="bot-msg">
-              Service unavailable.
-            </div>
-          `);
-
-      }
+        if (
+            getComputedStyle(win).display === "none"
+        ) {
+            win.style.display = "flex";
+        } else {
+            win.style.display = "none";
+        }
 
     });
 
-});
+    sendBtn.addEventListener("click", sendMessage);
 
-$(document).on(
-"click",
-"#jftw-chat-btn",
-function(){
+    input.addEventListener("keypress", function (e) {
 
-$("#jftw-chat-window")
-.toggle();
+        if (e.key === "Enter") {
+            sendMessage();
+        }
+
+    });
+
+    function sendMessage() {
+
+        const msg = input.value.trim();
+
+        if (!msg) return;
+
+        messages.innerHTML +=
+            `<div class="user-msg">${msg}</div>`;
+
+        input.value = "";
+
+        fetch(CHAT_API, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type":
+                "application/json"
+            },
+
+            body: JSON.stringify({
+                message: msg
+            })
+
+        })
+        .then(r => r.json())
+        .then(data => {
+console.log("Response:", data);
+            messages.innerHTML +=
+                `<div class="bot-msg">${data.reply}</div>`;
+
+            messages.scrollTop =
+                messages.scrollHeight;
+
+        })
+        .catch(() => {
+
+            messages.innerHTML +=
+                `<div class="bot-msg">Service unavailable.</div>`;
+
+        });
+
+    }
 
 });
