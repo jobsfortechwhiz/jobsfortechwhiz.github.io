@@ -1443,3 +1443,44 @@ header nav a{
     display:inline-block !important;
     color:inherit !important;
 }
+/* styling for contact us page */
+.contact-options{
+
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+
+}
+
+.contact-option{
+
+text-decoration:none;
+text-align:center;
+color:inherit;
+
+}
+
+.contact-option img{
+
+width:120px;
+height:120px;
+object-fit:contain;
+transition:.3s;
+
+}
+
+.contact-option:hover img{
+
+transform:scale(1.08);
+
+}
+
+.contact-option div{
+
+margin-top:10px;
+font-weight:700;
+font-size:18px;
+
+}

@@ -40,7 +40,100 @@ if(slug === "privacy-policy"){
     ); 
 
 }
+if(slug === "contact-us"){
 
+setTimeout(()=>{
+
+const postContent =
+document.getElementById("page-content");
+
+if(!postContent) return;
+
+/* Update old bullet text */
+
+postContent.innerHTML =
+postContent.innerHTML
+
+.replace(
+/WhatsApp Support/gi,
+"WhatsApp Support"
+)
+
+.replace(
+/Comment Section/gi,
+"Live AI Chat"
+)
+.replace(
+/side panel/gi,
+"footer section of page"
+)
+.replace(
+/Contact Form/gi,
+"Email Support"
+);
+
+/* Add extra content */
+
+postContent.insertAdjacentHTML(
+"beforeend",
+`
+
+<h2>Connect With Us</h2>
+
+<p>
+Need help with Interview PDFs, payment issues,
+quiz access, downloads, or technical guidance?
+Choose any of the support options below.
+</p>
+
+<div class="contact-options">
+
+<a
+href="https://wa.me/919129520224"
+target="_blank"
+class="contact-option">
+
+<img
+src="images/whatsapp.png"
+alt="WhatsApp Support">
+
+<div>WhatsApp Support</div>
+
+</a>
+
+<a
+href="mailto:priyankanigam25041999@gmail.com?subject=Support Request"
+class="contact-option">
+
+<img
+src="images/gmail.png"
+alt="Email Support">
+
+<div>Email Support</div>
+
+</a>
+
+<a
+href="#"
+onclick="initChatbot();return false;"
+class="contact-option">
+
+<img
+src="images/live.png"
+alt="Live Chat">
+
+<div>Live AI Chat</div>
+
+</a>
+
+</div>
+
+`
+);
+
+},1000);
+
+}
     document.title =
     page.title.$t;
 
