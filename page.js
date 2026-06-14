@@ -102,8 +102,8 @@ alt="WhatsApp Support">
 </a>
 
 <a
-href="mailto:priyankanigam25041999@gmail.com?subject=Support Request"
-class="contact-option">
+href="https://mail.google.com/mail/?view=cm&fs=1&to=pnigam342@gmail.com"
+target="_blank" class="contact-option">
 
 <img
 src="images/gmail.png"
@@ -115,7 +115,7 @@ alt="Email Support">
 
 <a
 href="#"
-onclick="initChatbot();return false;"
+onclick="document.getElementById('jftw-chat-btn').click();return false;"
 class="contact-option">
 
 <img
