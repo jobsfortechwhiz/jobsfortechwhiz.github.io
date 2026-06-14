@@ -9,7 +9,7 @@
 ],
 
 "answer":
-"Payments can be made online using the payment options available on the website.To purchase interview PDFs, <a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=make-payment-to-buy' target='_blank' class='chat-payment-link'>Click Here to Make Payment</a>U can buy directly from this page "
+"Payments can be made online using the payment options available on the website.To purchase interview PDFs,<br> <a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=make-payment-to-buy' target='_blank' class='chat-payment-link'>Click Here to Make Payment</a><br>U can buy directly from this page "
 },
 
 {
@@ -57,7 +57,7 @@
 ],
 
 "answer":
-"Please contact support through the contact details available on the website.Check out contact page here - <a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=contact-us' target='_blank' class='chat-payment-link'>Contact Here</a>"
+"Please contact support through the contact details available on the website.Check out contact page here - <br><a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=contact-us' target='_blank' class='chat-payment-link'>Contact Here</a>"
 },
 {
   "keywords": [
@@ -72,13 +72,13 @@
     "money back",
     "cancel order"
   ],
-  "answer": "Please contact support regarding refund requests.U can check our refund and cancellation policy here. <a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=cancellation-refund-policy' target='_blank' class='chat-payment-link'>Click Here</a>"
+  "answer": "Please contact support regarding refund requests.U can check our refund and cancellation policy here. <br><a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=cancellation-refund-policy' target='_blank' class='chat-payment-link'>Click Here</a>"
 },
 {
   "keywords": [
     "site",
     "content","info","topics","technical","programming","coding","english","verbal","website"
   ],
-  "answer": "This site includes basic to advance technical content from programming , AI ,cloud and other job related blogs and srticles.We also have paid content to help you with a broad understanding in your technological domain.To book live class , click here <a href='page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>Book Now</a>"
+  "answer": "This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
 }
 ]
