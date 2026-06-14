@@ -1239,19 +1239,16 @@ body.dark-mode .buy-footer-btn{
 }
 @media (max-width:768px){
 
-    .buy-footer-btn{
+  .buy-footer-btn{
+      display:block !important;
+      float:right !important;
 
-        display:block;
+      margin-top:-15px !important;
+      margin-right:10px !important;
 
-        width:max-content;
-
-        margin-left:auto !important;
-        margin-right:12px !important;
-
-        margin-bottom:20px !important;
-        margin-top:0 !important;
-
-    }
+      position:relative !important;
+      z-index:5;
+  }
 
 }
 nav{

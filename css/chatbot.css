@@ -40,12 +40,17 @@ z-index:999999;
     color: #f3f3f3;
     margin-top: auto;
     justify-content: flex-start;
+    line-height: 5px;
+    font-size: medium;
+    font-weight: 100;
+    text-shadow: #ff9800;
 }
 #jftw-input{
-    margin-left: 2px;
+    margin-left: 4px;
+    margin-top: 2px;
     max-width: fit-content;
     width: auto;
-    
+
 }
 #jftw-chat-window{
  flex-direction:column;
