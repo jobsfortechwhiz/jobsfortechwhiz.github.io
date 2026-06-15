@@ -1491,68 +1491,62 @@ font-size:18px;
 
 }
 
-html,
-body{
-    margin:0 !important;
-    padding:0 !important;
+.home-sidebar{
+    flex:0 0 380px !important;
+    width:380px !important;
+    
+}
+.home-sidebar{
+    align-self:flex-start !important;
+    height:auto !important;
+}
+.home-layout{
+    align-items:flex-start !important;
+}
+.home-sidebar .post-card{
+    padding:8px !important;
+    margin-bottom:8px !important;
 }
 
-footer{
-    margin-bottom:0 !important;
-    padding-bottom:10px !important;
+.home-sidebar img{
+    max-height:120px !important;
+    object-fit:cover;
+}
+.home-sidebar{
+    flex:0 0 350px !important;
+    width:350px !important;
+
+    align-self:flex-start !important;
+
+    padding:20px;
+    border-radius:12px;
 }
 
-body{
-    overflow-x:hidden;
+.posts-container{
+    flex:1;
 }
-#chat-widget,
-.chatbot-container{
-
-    position:fixed !important;
-
-    right:20px !important;
-
-    bottom:120px !important;
-}
-/* Move chatbot upward */
-#jftw-chat-btn{
-    position:fixed !important;
-    right:20px !important;
-    bottom:120px !important;
-    z-index:99999 !important;
+.page-layout{
+    display:flex;
+    gap:25px;
+    align-items:flex-start;   /* prevents sidebar stretching */
 }
 
-/* Prevent extra gap after pagination */
-.pagination,
-#pagination{
-    margin-bottom:0 !important;
-    padding-bottom:0 !important;
+.main-content{
+    flex:1 1 auto;
+    min-width:0;
 }
 
-/* Tight footer */
-footer{
-    margin-top:10px !important;
-    margin-bottom:0 !important;
-    padding-bottom:0 !important;
-}
+.home-sidebar{
 
-body{
-    margin-bottom:0 !important;
-    padding-bottom:0 !important;
-}
-#jftw-chat-btn{
-    position:fixed !important;
+    flex:0 0 340px;      /* increase width */
+    width:340px;
 
-    width:60px !important;
-    height:60px !important;
+    align-self:flex-start; /* keep natural height */
 
-    left:auto !important;
-    top:auto !important;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
 
-    right:20px !important;
-
-    /* move above footer */
-    bottom:120px !important;
-
-    z-index:999999 !important;
+    height:auto !important;
 }
