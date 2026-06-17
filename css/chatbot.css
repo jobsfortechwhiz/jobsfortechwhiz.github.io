@@ -164,3 +164,20 @@ transform:translateY(-2px);
   }
 
 }
+
+@media (max-width:768px){
+
+    #jftw-chat-btn{
+        bottom:80px !important;
+        right:10px !important;
+    }
+
+    #jftw-chat-window{
+        bottom:150px !important;
+        right:10px !important;
+
+        width:calc(100vw - 20px) !important;
+        max-width:360px !important;
+    }
+
+}
