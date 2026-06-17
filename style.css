@@ -1647,26 +1647,18 @@ body #jftw-chat-window{
 html,
 body{
     min-height:100vh;
+    margin:0;
 }
 
 body{
     display:flex;
     flex-direction:column;
-}
-
-.container{
-    flex:1 0 auto;
-}
-
-.site-footer{
-    flex-shrink:0;
-}
-body{
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
 }
 
 .container{
     flex:1;
+}
+
+.site-footer{
+    margin-top:auto;
 }
