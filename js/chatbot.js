@@ -105,24 +105,39 @@ function initChatbot() {
 }
 if(data.reply === "__FOCUS_SEARCH__"){
 
-    const search =
-    document.getElementById("search");
+    const search = document.getElementById("search");
 
-    if(search){
+if(search){
 
-        search.focus();
+    search.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
+    search.focus();
 
-    }
+    search.style.boxShadow =
+      "0 0 0 4px rgba(255,152,0,.5)";
 
-    messages.innerHTML +=
-    `<div class="bot-msg">
-      🔍 Please use the search bar at the top of the page.
-    </div>`;
+    search.style.border =
+      "2px solid #ff9800";
+ search.classList.add(
+        "search-highlight"
+    );
 
-    return;
+    setTimeout(() => {
+
+        search.classList.remove(
+            "search-highlight"
+        );
+
+    }, 3000);
+    setTimeout(() => {
+
+        search.style.boxShadow = "";
+        search.style.border = "";
+
+    }, 3000);
+
+}
 }

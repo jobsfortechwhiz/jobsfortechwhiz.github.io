@@ -115,7 +115,7 @@ alt="WhatsApp Support">
 </a>
 
 <a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=pnigam342@gmail.com"
+href="mailto:pnigam342@gmail.com?subject=Contact Support"
 target="_blank" class="contact-option">
 
 <img
