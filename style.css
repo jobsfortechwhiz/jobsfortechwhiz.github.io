@@ -1568,6 +1568,28 @@ main{
         margin-top:20px !important;
     }
 }
+#chatbot-container{
+    position:fixed !important;
+    width:0 !important;
+    height:0 !important;
+    overflow:visible !important;
+    pointer-events:none;
+}
+
+#jftw-chat-btn,
+#jftw-chat-window{
+    pointer-events:auto;
+}
+#jftw-chat-btn{
+    position:fixed !important;
+    right:15px !important;
+    bottom:20px !important;
+
+    left:auto !important;
+    top:auto !important;
+
+    z-index:999999 !important;
+}
 .video-block{
     width:420px; /* same width as iframe */
     margin-left:20px;
