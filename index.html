@@ -369,7 +369,11 @@ padding:40px;
 padding:30px;
 border-radius:20px;
 text-align:center;
-background:linear-gradient(135deg,#00c853,#64dd17);
+background:linear-gradient(
+135deg,
+#1976d2,
+#2196f3
+);
 color:white;
 box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
@@ -832,53 +836,463 @@ Buy English PDFs
 </section>
 
 <footer>
-<div class="footer-help-container">
+  <p>
+© 2026 TechnicalMindSpace |
+Learning Resources • Career Growth • Interview Preparation
+</p>
+  <div class="footer-content">
 
-  <div class="help-block">
+  <!-- Left Column -->
+  <div class="footer-links-column">
 
-    <div class="help-title">
-      Need Help?
-    </div>
+    <a href="/">Home</a>
 
-   <a class="email-support-btn"
-href="mailto:pnigam342@gmail.com?subject=Contact Support"
-target="_blank">
+    <a href="page.html?slug=about-us.html">About Us</a>
 
-      <i class="fas fa-envelope"></i>
-      Email Support
+    <a href="page.html?slug=privacy-policy.html">Privacy Policy</a>
 
-    </a>
+    <a href="page.html?slug=disclaimer.html">Disclaimer</a>
+
+    <a href="page.html?slug=refund-policy.html">Refund Policy</a>
+    <a href="page.html?slug=contact-us">Contact</a>
+    <div class="footer-heading">
+    <a href="blogs.html">Explore Articles</a> </div>
+
 
   </div>
 
-  <div class="social-icons">
+  <!-- Center Column -->
+    
+  <div class="footer-help-column">
 
-    <a href="https://youtube.com/@priyankanigam6239?si=2sx3WC7uADBMxlaf" 
-    title="YouTube" class="youtube-icon">
-      <i class="fab fa-youtube"></i>
-    </a>
+    <div class="need-help">
+      <h3>Need Help?</h3>
 
-    <a href="https://wa.me/919129520224"
-target="_blank"
-title="WhatsApp" class="whatsapp-icon">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+      <a
+        class="email-support-btn"
+        href="mailto:pnigam342@gmail.com?subject=Contact Support"
+        target="_blank">
 
-    <a href="https://interviewprepforinsiders.blogspot.com/"
-target="_blank"
-title="Site - interviewprepforinsiders">
-      <img src="images/IP_logo.png">
+        <i class="fas fa-envelope"></i>
+        Email Support
+
+      </a>
+    </div>
+
+    <div class="social-icons">
+
+      <a href="https://youtube.com/@priyankanigam6239?si=2sx3WC7uADBMxlaf">
+      <i class="fab fa-youtube"></i>  Youtube
+      </a>
+
+      <a href="https://wa.me/919129520224">
+    <i class="fab fa-whatsapp"></i>   WhatsApp 
+      </a>
+
+    </div>
+
+  </div>
+<div class="footer-author-column">
+
+<h3>Priyanka</h3>
+
+<div class="author-role">
+Tech Blogger
+</div>
+
+<div class="author-state">
+Uttar Pradesh
+</div>
+
+<div class="author-work">
+
+Past Work
+
+</div>
+
+<a
+href="https://technologytalents.blogspot.com/"
+target="_blank">
+
+Technology Talents
+
+</a>
+
+<a
+href="https://interviewprepforinsiders.blogspot.com/"
+target="_blank">
+
+Interview Prep For Insiders
+
+</a>
+
+<a
+href="https://get2logics.blogspot.com/"
+target="_blank">
+
+Get2Logics
+
+</a>
+
+</div>
+  <!-- Right Column -->
+  <div class="footer-buy-column">
+
+    <a
+      href="#" id="buyBtn"
+      class="buy-footer-btn">
+
+      🔥 Buy PDFs
+
     </a>
 
   </div>
 
 </div>
-<p>
-© 2026 TechnicalMindSpace |
-Learning Resources • Career Growth • Interview Preparation
-</p>
 
 </footer>
+<style>
+  .footer-heading{
+
+    display:inline-block;
+
+    background:#ff9800;
+
+    color:#fff;
+
+    font-weight:bold;
+
+    padding:10px 18px;
+
+    border-radius:25px;
+
+    margin-bottom:12px;
+
+    box-shadow:0 0 12px rgba(255,152,0,.4);
+
+    animation:explorePulse 2s infinite;
+}
+
+@keyframes explorePulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+  .footer-help-column,
+.footer-author-column,
+.footer-links-column{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.footer-help-column{
+
+    position:relative !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+
+    align-items:center !important;
+}
+
+.social-icons{
+
+    position:relative !important;
+
+    left:35px;;
+    right:auto !important;
+
+    top:auto !important;
+    bottom:auto !important;
+
+    margin-top:15px !important;
+    align-self:center !important;
+}
+.need-help{
+
+    text-align:center;
+}
+
+.social-icons{
+
+    align-self:center;
+}
+
+
+
+.social-icons a{
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    gap:10px !important;
+
+    color:white !important;
+
+    text-decoration:none !important;
+
+    font-size:16px !important;
+
+    font-weight:600 !important;
+
+    line-height:1.2 !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+}
+.social-icons i{
+
+    font-size:24px !important;
+
+    width:28px;
+
+    text-align:center;
+}
+
+.social-icons .fa-youtube{
+
+    color:#ff0000;
+
+    font-size:24px;
+
+}
+
+.social-icons .fa-whatsapp{
+
+    color:#25d366;
+
+    font-size:24px;
+
+}
+.footer-author-column{
+
+    min-width:240px;
+}
+
+.footer-author-column h3{
+
+    margin:0;
+    color:#ffd54f;
+}
+
+.author-role,
+.author-state{
+
+    color:#ddd;
+    font-size:14px;
+}
+
+.author-work{
+
+    color:#90caf9;
+    font-weight:bold;
+
+    margin-top:8px;
+}
+
+.footer-author-column a{
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:14px;
+}
+
+.footer-author-column a:hover{
+
+    color:#ff9800;
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:10px;
+
+    align-items:center;
+}
+@media(max-width:768px){
+
+.footer-content{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.footer-help-column,
+.footer-author-column,
+.footer-links-column{
+
+    align-items:center;
+}
+
+}
+.footer-content{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:35px;
+
+    width:100%;
+
+    flex-wrap:wrap;
+}
+
+.footer-links-column{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    min-width:180px;
+
+    text-align:left;
+}
+
+.footer-links-column a{
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.footer-links-column a:hover{
+
+    color:#ff9800;
+    padding-left:5px;
+}
+
+.footer-center{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+}
+
+.footer-buy-column{
+
+    min-width:220px;
+
+    display:flex;
+    justify-content:flex-end;
+}
+.buy-footer-btn{
+display:inline-block;
+
+    background:linear-gradient(
+        135deg,
+        #ff6b00,
+        #ff9800
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+    box-shadow:
+    0 0 20px rgba(255,107,0,.5);
+
+    animation:buyPulse 1.8s infinite;
+
+    animation:pulseBuy 1.5s infinite;
+
+    box-shadow:0 0 20px rgba(255,107,0,.5);
+}
+.buy-footer-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+@keyframes buyPulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+  }
+@keyframes pulseBuy{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+@media(max-width:768px){
+
+    .footer-content{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        text-align:center;
+    }
+
+    .footer-links-column{
+
+        text-align:center;
+        align-items:center;
+    }
+
+    .footer-buy-column{
+
+        justify-content:center;
+    }
+
+}
+</style>
 <div id="buyDialog" class="buy-dialog">
 
 <div class="buy-box">
