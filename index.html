@@ -1,3 +1,12 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        </head>
+        <body>
+
+        
 <style>
 .labels-section{
 width:100% !important;
@@ -14,7 +23,7 @@ max-width:none !important;
 display:grid !important;
 
 grid-template-columns:
-repeat(3,140px) !important;
+repeat(3,130px) !important;
 
 justify-content:center !important;
 
@@ -24,75 +33,8 @@ row-gap:-20px !important;
 width:100% !important;
 
 }
-.topic-circle{
 
-border-radius:50%;
-width:140px !important;
-height:140px !important;
 
-flex-shrink:0;
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:24px;
-font-weight:700;
-
-margin:-18px !important;
-
-position:relative;
-z-index:2;
-
-}
-.circle-links,
-.labels-section{
-
-padding:0 !important;
-margin:0 !important;
-
-}
-.topic-circle:hover{
-
-    transform:
-    scale(1.08);
-
-    box-shadow:
-    0 15px 40px
-    rgba(33,150,243,.65);
-
-}
-.topic-circle,
-.circle-links a{
-
-    width: 140px;
-    height: 140px;
-
-    font-size:30px;
-}
-@media(max-width:768px){
-
-    .topic-grid{
-        grid-template-columns:1fr;
-    }
-
-    .topic-circle,
-    .circle-links a{
-
-        width:140px;
-        height: 140px;
-
-        margin:auto;
-    }
-}
-.topic-circle:nth-child(2),
-.topic-circle:nth-child(5){
-transform:translateX(-25px);
-}
-
-.topic-circle:nth-child(3),
-.topic-circle:nth-child(6){
-transform:translateX(-50px);
-}
   .hero-content{
 
 display:grid;
@@ -601,8 +543,12 @@ footer{
 z-index:auto !important;
 }
 #jftw-chat-btn{
-position:fixed !important;
+    left:auto !important;
+right:20px !important;
 bottom:20px !important;
+z-index:999999 !important;
+position:fixed !important;
+
 right:20px !important;
 
 width:65px !important;
@@ -619,7 +565,6 @@ border-radius:50% !important;
 
 cursor:pointer !important;
 
-z-index:99999999 !important;
 }
 
 #jftw-chat-window{
@@ -629,10 +574,59 @@ right:20px !important;
 
 z-index:99999999 !important;
 }
+.circle-pyramid{
+
+display:flex;
+flex-direction:column;
+
+align-items:center;
+
+margin:auto;
+
+}
+
+.row{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:-25px;   /* overlap rows */
+
+}
+
+.topic-circle{
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+margin:-3px;       /* overlap circles */
+
+background:
+linear-gradient(
+135deg,
+#1976d2,
+#2196f3
+);
+
+color:white;
+
+font-weight:bold;
+
+box-shadow:
+0 0 15px rgba(33,150,243,.35);
+
+}
 </style>>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <header class="hero">
 
 <h1>TechnicalMindSpace</h1>
@@ -652,7 +646,7 @@ Interview Preparation & Career Skills
 
 <a href="blogs.html">Blogs</a>
 
-<a href="#" id="buyBtn">Buy</a>
+<a href="#" class="buyBtn">Buy</a>
 
 <a href="page.html?slug=contact-us">Contact</a>
 
@@ -770,11 +764,16 @@ Visit YouTube Channel
 
 <div class="circle-links">
 <div class="topic-grid">
+    <div class="circle-pyramid">
+          <div class="row row4">
 <a class="topic-circle" href="blogs.html?cate=Java interview Questions">Java</a>
+<a class="topic-circle" href="blogs.html?cate=Android interview Questions">Android</a>
+<a class="topic-circle" href="blogs.html?cate=Spring interview Questions">Spring</a>
 
 <a class="topic-circle" href="blogs.html?cate=PHP web development Questions">
 PHP
-</a>
+</a></div>
+  <div class="row row3">
 
 <a class="topic-circle" href="blogs.html?cate=Cloud DevOps | GitOps interview questions">
 Cloud / DevOps
@@ -785,20 +784,21 @@ Cloud / DevOps
 <a class="topic-circle"  href="blogs.html?cate=Technical interview questions">
 Technical
 </a>
-
+</div>
+ <div class="row row2">
 <a class="topic-circle" href="blogs.html?cate=HR | Managerial interview Questions">
 HR / Managerial
 </a>
 
 <a class="topic-circle" href="https://technologytalents.blogspot.com/">
 Advance Tech Blogs
-</a>
+</a> </div> <div class="row row1">
 <a class="topic-circle" href="https://get2logics.blogspot.com/" >
 Personal development Blogs
-</a>
+</a></div>
 
 </div>
-
+</div>
 </div>
 </div>
 </section>
@@ -939,8 +939,8 @@ Get2Logics
   <div class="footer-buy-column">
 
     <a
-      href="#" id="buyBtn"
-      class="buy-footer-btn">
+      href="#" 
+      class="buyBtn buy-footer-btn">
 
       🔥 Buy PDFs
 
@@ -1293,37 +1293,21 @@ display:inline-block;
 
 }
 </style>
-<div id="buyDialog" class="buy-dialog">
 
-<div class="buy-box">
-
-<h3>Choose PDF Category</h3>
-
-<a href="programming-pdfs.html">
-Programming PDFs
-</a>
-
-<a href="english-pdfs.html">
-English PDFs
-</a>
-
-<button onclick="closeBuyDialog()">
-Close
-</button>
-
-</div>
-
-</div>
 <script>
 document
-.getElementById("buyBtn")
-.onclick=()=>{
+.querySelectorAll(".buyBtn")
+.forEach(btn=>{
+
+    btn.onclick=(e)=>{
+
+        e.preventDefault();
 
 document
 .getElementById("buyDialog")
 .style.display="block";
-
-};
+    }
+});
 
 function closeBuyDialog(){
 
@@ -1333,34 +1317,9 @@ document
 
 }
 </script>
-<div id="jftw-chat-btn">
-💬
-</div>
 
-<div id="jftw-chat-window">
-
-<div id="chat-header">
-TechnicalMindSpace Assistant
-</div>
-
-<div id="chat-messages"></div>
-
-<div id="chat-input-area">
-
-<input
-id="chat-input"
-placeholder="Ask anything...">
-
-<button id="send-btn">
-Send
-</button>
-
-</div>
-
-</div>
 <script src="js/book-tutor.js"></script>
 <script src="buy_now_dialog.js"></script>
-<script src="script.js"></script>
 <div id="chatbot-container"></div>
 
 <link
@@ -1457,3 +1416,6 @@ animateCounter(
 15
 );
 </script>>
+    
+        </body>
+</html>
