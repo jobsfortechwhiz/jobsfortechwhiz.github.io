@@ -48,9 +48,8 @@
 },
 {
 "keywords":[
-"download",
-"receive pdf","get these books","get books",
-"get pdf","get course"
+"download","get",
+"receive","avail","secure","take"
 ],
 
 "answer":
@@ -63,6 +62,22 @@
 
 "answer":
 "These pdfs r covering some core concepts of programming , devOps ,and other cloud and web fundamentals.These pdfs has most frequently asked set of questions asked in an interview.If u r fresher i would recommend to buy all programming pdfs and strengthen your technical foundation.<br><br>Also selling english speaking courses to keep learners' english in check.Covered all topics from sentence formation,slangs and advance common use sentences,modern vocabularies,grammar rules.It's a complete kit for a comprehensive and enhanced learning from grassroot level and has all varieties of topics covered to transform u from basic to advance."
+},
+{
+"keywords":[
+"english pdf","spoken course","soft skill course","verbal course","english speaking book","spoken pdf","conversational book"
+],
+
+"answer":
+"These r some self learning books to improve your speaking ability in english.This book covers every major section of common english which r a stepping stone to your journey from a novice to practioner and than to become a professional in english speaking.  "
+},
+{
+"keywords":[
+"programming pdf","programming book","programming courses","technical content","Tech learning material","technical interview guide","programming interview pdf","Tech pdf","Tech courses"
+],
+
+"answer":
+"Here in these pdfs covered most section of web programming,app designing , api testing.Working with different automation tool ,code pipeline building ,testing and deployment.Also covered topics for app security , project tracking , message routing from 1 node to another, different http protocols and different cloud based hosting repositories and  db interactions."
 },
 {
 "keywords":[
