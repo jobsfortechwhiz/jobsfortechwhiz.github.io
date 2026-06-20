@@ -9,8 +9,28 @@
 ],
 
 "answer":
-"Payments can be made online using the payment options available on the website.To purchase interview PDFs,<br> <a href=\"page.html?slug=make-payment-to-buy\" class=\"buy-footer-btn\"> 🔥 Buy English PDFs </a><br><br><a href=\"page.html?slug=pdf-store\" class=\"pdf-store-btn\"> 📚 PDF Programming PDFs 🔥</a>"
+"Payments can be made online using the payment options available on the website.To purchase interview PDFs,<br> <a href=\"page.html?slug=make-payment-to-buy\" class=\"buy-footer-btn\"> 🔥 Buy English PDFs </a><br><br><a href=\"page.html?slug=pdf-store\" class=\"pdf-store-btn\"> 📚 Buy Programming PDFs 🔥</a>"
   },
+  {
+"keywords":[
+"spoken english course",
+"english pdf","Buy spoken english content",
+"get english pdf" ,"verbal ","soft skills"
+],
+
+"answer":
+"U can buy our english courses online.Our books r available in different online platforms - Amazon Kindle ,Play Books, and other online platforms.U can also directly buy them from our website through online UPI or card. After successful payment, the PDF download option becomes available immediately.<br><a href=\"page.html?slug=make-payment-to-buy\" class=\"buy-footer-btn\"> 🔥 Buy English PDFs </a> "
+},
+{
+"keywords":[
+"Programming course",
+"Technical interview pdf","Buy technical pdfs","Technical Notes","Online purchase for technical content","get Online coding courses",
+"get Online programming courses","Purchase technical notes online"
+],
+
+"answer":
+"U can buy our Programming and tech courses online.U can buy them from our website through online UPI or card . After successful payment, the PDF download option becomes available immediately. <br><a href=\"page.html?slug=pdf-store\" class=\"pdf-store-btn\"> 📚 PDF Programming PDFs 🔥</a> "
+},
 {
 "keywords":[
 "download",
@@ -19,12 +39,12 @@
 ],
 
 "answer":
-"After successful payment, the PDF download option becomes available immediately.On top of every post u would either see a quiz link or a Download PDF button for enhanced knowledge building. "
+"After successful payment, the PDF download option becomes available immediately .PDF will be either sent to your registered id or manual download option will be provided for instant download. "
 },
 
 {
 "keywords":[
-"java"
+"java","core java","Advance Java","Java awt","Java FX","Desktop Apps"
 ],
 
 "answer":
@@ -38,12 +58,60 @@
     "spring boot pdf",
     "spring boot notes"
   ],
-  "answer": "Spring Boot interview PDFs and resources are available on the website."
+  "answer": "Spring Boot interview PDFs and resources are available on the website.",
+   "action":"category",
+  "category":"Spring interview Questions"
+},
+{
+  "keywords": [
+    "android pdf","android courses", "app development","android activity","android with Java","android app designing notes",
+    "android application","android studio","Volley","retrofit","app components","android app architecture"
+  ],
+  "answer": "Android app development interview PDFs and resources are available on the website.",
+   "action":"category",
+  "category":"Android interview Questions"
+},
+{
+  "keywords": [
+    "php web apps","php backend","php rest app","website development","php app designing","php native,web,hybrid application"
+  ],
+  "answer": "PHP app development interview PDFs and resources are available on the website.",
+   "action":"category",
+  "category":"PHP web development Questions"
+},
+{
+  "keywords": [
+    "git","cloud computing","DevOps","gitOps","docker","container","kubernetes","unix","linux","app security","cloud operations",
+    "microservice","Azure","AWS","GCP","serverless","CQRS"
+  ],
+  "answer": "We provide such related interview PDFs and resources on our website.",
+   "action":"category",
+  "category":"Cloud DevOps | GitOps interview questions"
+},
+{
+  "keywords": [
+    "hr","managerial","hr interview questions","freshers basic interview questions","hr panel round","for fresher experienced candidates",
+    "hr search","company specific questions","general hr"
+  ],
+  "answer": "we have list of 100 such questions to help learner with hr specific questions",
+   "action":"category",
+  "category":"HR | Managerial interview Questions"
+},
+{
+  "keywords": [
+    "jira","json","terraform","kafka","Maven","gradle","CI/CD","build pipelines","client-server architecture",
+    "project tracking tool","project standards","Web standards","Authorization token","API Key","Oauth","Auth token",
+    "http protocols","websocket","REST endpoints","swagger","postman","jwt","jackson","JSONP","SOAP REST"
+  ],
+  "answer": "We have interview related content for such topics.U can find similar post here",
+   "action":"category",
+  "category":"Technical interview questions"
 },
 
 {
 "keywords":[
-"android","php","git","unix","cloud","hr","interview","app development","devOps","serverless","elastic search","RAG pipeline"
+"AI","GenAI","Agentic AI","Vibe coding","prompt engineering","inner engineering","elastic search","RAG pipeline",
+"Deep learning","ML","Data science","vector search"
 ],
 
 "answer":"🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>"

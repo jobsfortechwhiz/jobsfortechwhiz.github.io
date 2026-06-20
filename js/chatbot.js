@@ -133,7 +133,24 @@ function initChatbot() {
        
 
     }
+else if(data.action === "category"){
 
+    messages.innerHTML += `
+    <div class="bot-msg">
+      ${data.response}
+
+      <br><br>
+
+      <button
+      onclick="
+      window.location.href=
+      'blogs.html?cate=${encodeURIComponent(data.category)}'
+      ">
+      View Java Articles →
+      </button>
+
+    </div>`;
+}
     else{
 
         messages.innerHTML +=
