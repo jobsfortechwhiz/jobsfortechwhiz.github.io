@@ -134,21 +134,20 @@ function initChatbot() {
 
     }
 else if(data.action === "category"){
-
+ console.log("BOT DATA =", data);
     messages.innerHTML += `
     <div class="bot-msg">
-      ${data.response}
+      ${data.reply}
 
       <br><br>
 
-      <button
-      onclick="
-      window.location.href=
-      'blogs.html?cate=${encodeURIComponent(data.category)}'
-      ">
-      View Java Articles →
-      </button>
+       <button
+      class="chat-nav-btn"
+      onclick="window.location.href='blogs.html?cate=${encodeURIComponent(data.category)}'">
 
+      View Related Articles →
+
+      </button>
     </div>`;
 }
     else{
