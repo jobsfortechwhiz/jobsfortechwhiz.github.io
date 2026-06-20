@@ -4,8 +4,15 @@
 "payment",
 "pay",
 "upi",
-"card",
-"purchase","options to buy","buying methods"
+"card","emi","paypal","netbanking"
+],
+
+"answer":
+"Payments can be made online using the payment options available in the website.To purchase interview PDFs,<br> <a href=\"page.html?slug=make-payment-to-buy\" class=\"buy-footer-btn\"> 🔥 Buy English PDFs </a><br><br><a href=\"page.html?slug=pdf-store\" class=\"pdf-store-btn\"> 📚 Buy Programming PDFs 🔥</a>"
+  },
+   {
+"keywords":[
+"purchase","options to buy","buying methods","buy pdfs","buy books","Payment mode","buy","how to buy"
 ],
 
 "answer":
@@ -13,7 +20,7 @@
   },
   {
 "keywords":[
-"spoken english course",
+"spoken english course","english speaking course",
 "english pdf","Buy spoken english content",
 "get english pdf" ,"verbal ","soft skills"
 ],
@@ -23,9 +30,17 @@
 },
 {
 "keywords":[
-"Buy Programming course","purchase technical interview book","technical interview PDFs","Engineering Notes",
-"Technical interview pdf","Buy technical pdfs","Technical Notes","Online purchase for technical content","get Online coding courses",
-"get Online programming courses","Purchase technical notes online"
+"Buy Programming course","purchase technical interview book","get technical interview PDFs","Buy Engineering Notes",
+"get Technical interview pdf","Buy technical pdfs"
+],
+
+"answer":
+"U can buy our Programming and tech courses online.U can buy them from our website through online UPI or card . After successful payment, the PDF download option becomes available immediately. <br><a href=\"page.html?slug=pdf-store\" class=\"pdf-store-btn\"> 📚 PDF Programming PDFs 🔥</a> "
+},
+{
+"keywords":[
+"Technical Notes","Online purchase for technical content","get Online coding courses",
+"get Online programming courses","Purchase technical notes online","buy technical course"
 ],
 
 "answer":
@@ -35,13 +50,20 @@
 "keywords":[
 "download",
 "receive pdf","get these books","get books",
-"get pdf"
+"get pdf","get course"
 ],
 
 "answer":
 "After successful payment, the PDF download option becomes available immediately .PDF will be either sent to your registered id or manual download option will be provided for instant download. "
 },
+{
+"keywords":[
+"pdf","book","courses","content","learning material","booklet","guide"
+],
 
+"answer":
+"These pdfs r covering some core concepts of programming , devOps ,and other cloud and web fundamentals.These pdfs has most frequently asked set of questions asked in an interview.If u r fresher i would recommend to buy all programming pdfs and strengthen your technical foundation.<br><br>Also selling english speaking courses to keep learners' english in check.Covered all topics from sentence formation,slangs and advance common use sentences,modern vocabularies,grammar rules.It's a complete kit for a comprehensive and enhanced learning from grassroot level and has all varieties of topics covered to transform u from basic to advance."
+},
 {
 "keywords":[
 "java","core java","Advance Java","Java awt","Java FX","Desktop Apps"
@@ -232,7 +254,7 @@
 {
   "keywords": [
     "this site",
-    "content available","site info","relevant topics","technical","programming","coding","english","verbal","about website","available"
+    "content available","site info","relevant topics","about website","content available"
   ],
   "answer": "This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
 }
