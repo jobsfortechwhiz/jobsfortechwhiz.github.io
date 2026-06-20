@@ -194,6 +194,7 @@ header h1,
     transform:translateY(-3px);
 
 }
+/*
 .site-footer{
 position:relative;
     margin-top:50px;
@@ -203,8 +204,8 @@ position:relative;
     color:white;
 
     padding:40px 20px;
-}
-
+} */
+/*
 .footer-content{
 
     max-width:1200px;
@@ -232,7 +233,7 @@ position:relative;
 
     text-decoration:underline;
 }
-
+*/
 .copyright{
 
     opacity:.8;
@@ -281,7 +282,7 @@ width:max-content;
       0 0 10px rgba(255,255,255,.5),
       0 0 20px rgba(255,255,255,.3);
 }
-
+/*
 .social-icons{
   
     align-items:center;
@@ -294,7 +295,7 @@ width:max-content;
     display:flex !important;
     gap:18px !important;
    
-}
+} */
 .email-support-btn{
 pointer-events:auto !important;
  position:relative;
@@ -1262,10 +1263,10 @@ body.dark-mode .buy-dialog-content h3{
     align-items:flex-start;
     flex-wrap:wrap;
 }
-
+/*
 .footer-right{
     margin-left:auto;
-}
+}*/
 .buy-nav:hover{
 
     transform:translateY(-2px);
@@ -1444,6 +1445,7 @@ nav{
     margin-left:auto !important;
     align-items:center;
 }
+/*
 .social-icons{
 
     width:100%;
@@ -1456,7 +1458,7 @@ nav{
  text-align:center;
     margin-top:30px;
 
-}
+}*/
 
 .social-icons a{
 

@@ -118,14 +118,16 @@
 },
 
 {
-  "keywords":["search","find topic","get post","fetch blogs","technical articles","important stuffs"],
+  "keywords":["search","find topic","get post","fetch blogs","technical articles","important stuffs","relevant blogs"
+,"quick search","navigate","direct","redirect","move","jump","seek","look","see"
+],
   "answer":"__FOCUS_SEARCH__"
 },
 {
 "keywords":[
 "contact",
 "support",
-"help"
+"help","customer care","helpdesk","helpline","need technical assistance"
 ],
 
 "answer":
@@ -142,15 +144,33 @@
   "keywords": [
     "refund",
     "money back",
-    "cancel order"
+    "cancel order","pay back","cancel purchasing","payment decline","transaction issues ","cancel payment",
+    "payment fail error"
   ],
   "answer": "Please contact support regarding refund requests.U can check our refund and cancellation policy here. <br><a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=cancellation-refund-policy' target='_blank' class='chat-payment-link'>Click Here</a>"
 },
 {
   "keywords": [
-    "site",
-    "content","info","topics","technical","programming","coding","english","verbal","website","available"
+    "this site",
+    "content available","site info","relevant topics","technical","programming","coding","english","verbal","about website","available"
   ],
   "answer": "This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
+}
+,
+{
+  "keywords": [
+    "best language for website","how to design website","how to create app","good programming languages for app designing",
+    "website development",
+    "site designing","web apps development","Top Known languages for website development","best framework for site creation"
+  ],
+  "answer": "Javascript is 1 of most promiment , widely used language for both front end and backend task.U can search online to find more on it.In this website , we have post for website developmwnt with PHP IN backend and using JQuery (as an advance JS Library) for UI designing. "
+}
+,
+{
+  "keywords": [
+    "seo","site ranking","improve google ranking for site","site hosting","page indexing","web crawling","sitemap","backlinks",
+    "aso","pwa","custom domain","improve search index"
+  ],
+  "answer": "To improve site indexing , u need to have good ,text-heavy content on your site but avoid duplicate content.With good , high quality content will improve SEO which is Search Engine Optimization.Site SEO gets better with high page indexing, updated robot.txt require for automatic web crawling , updated sitemap.Site with primary domain generally have good SEO and r easily recognised by google.and continue posting on your site also 1 way to improve site indexing in google.  "
 }
 ]
