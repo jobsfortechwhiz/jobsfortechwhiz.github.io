@@ -20,9 +20,9 @@
   },
   {
 "keywords":[
-"spoken english course","english speaking course",
-"english pdf","Buy spoken english content",
-"get english pdf" ,"verbal ","soft skills"
+"buy spoken english course","buy english speaking course",
+"buy english pdf","Buy spoken english content","buy english training material",
+"get english pdf" ,"buy verbal content ","get soft skills course","purchase english pdf"
 ],
 
 "answer":
@@ -65,7 +65,8 @@
 },
 {
 "keywords":[
-"english pdf","spoken course","soft skill course","verbal course","english speaking book","spoken pdf","conversational book"
+"english pdf","spoken course","soft skill course","verbal course","english speaking book","spoken pdf","conversational book",
+"spoken english pdf","soft skill training","spoken english course"
 ],
 
 "answer":
@@ -81,7 +82,7 @@
 },
 {
 "keywords":[
-"java",
+"java","Java post","java articles",
 "core java",
 "advanced java",
 "java interview",
@@ -108,7 +109,7 @@
 
 {
   "keywords": [
-    "spring boot pdf",
+    "spring boot pdf","spring boot post","spring boot articles",
     "spring boot notes","Spring framework",
      "spring",  "learn spring boot",
     "spring boot", "spring topics",
@@ -143,7 +144,7 @@
   "keywords": [
     "android pdf","android courses", "app development","android activity","android with Java","android app designing notes",
     "android application","android studio","Volley","retrofit","app components","android app architecture",
-     "android",
+     "android","android post","android articles",
     "android interview","learn android",
     "android interview questions",
     "android questions",
@@ -176,7 +177,7 @@
   "keywords": [
     "php web apps","php backend","php rest app","php website development","php app designing","php native,web,hybrid application"
     , "php",  "learn php",
-    "php interview",
+    "php interview","php post","php articles",
     "php interview questions",
     "php questions",
     "php pdf",  "show php articles",
@@ -196,7 +197,7 @@
     "php framework",
     "server side scripting",
     "xampp",
-    "wamp",
+    "wamp","lamp"
     "apache php",
     "php jobs"
   ],
@@ -256,9 +257,7 @@
 "message broker",
 "rabbitmq",
 "json",
-"xml",
-"jwt",
-"oauth",
+"xml","xml post","xml blog","xml article","xml content",
 "api key",
 "microservices"
   ],
@@ -269,7 +268,7 @@
 {
   "keywords": [
     "jira","CI/CD","build pipelines","client-server architecture",
-    "project tracking tool"
+    "project tracking tool","Maven","Gradle"
   ],
   "answer": "We have interview related content for such topics.U can find similar post here",
    "action":"category",
@@ -277,7 +276,8 @@
 },
 {
   "keywords": [
-   "Authorization token","API Key","Oauth","Auth token","jwt"
+   "Authorization token","API Key","Oauth","Auth token","jwt",
+   "jwt","jwt token","jwt blog","jwt post","jwt article","jwt content"
   ],
   "answer": "We have interview related content for such topics.U can find similar post here",
    "action":"category",
@@ -304,9 +304,9 @@
 {
 "keywords":[
 "artificial intelligence",
-"chatgpt",
-"openai",
-"llm",
+"chatgpt","ai","genai",
+"openai","ai blog","ai post","ai content","ai material",
+"llm","ml","ml blog","ml post","ml content","ml material",
 "large language model",
 "machine learning",
 "deep learning",
@@ -315,7 +315,7 @@
 "agentic ai",
 "autonomous agent",
 "langchain",
-"rag",
+"rag","rag pipeline","rag elastic",
 "vector database",
 "embedding"
 ],
@@ -404,12 +404,11 @@
 ,
 {
   "keywords": [
-    "this site",
     "content available","site info","relevant topics","about website","content available",
     "what is technicalmindspace",
     "about technicalmindspace",
     "what is this website",
-    "about this site",
+    "about this site","about the site",
     "what content do you provide"
   ],
   "answer": "TechnicalMindSpace provides interview preparation content, technical articles, programming resources, English communication material, DevOps and Cloud learning resources, premium PDFs and mentoring sessions.<br><br>This site includes basic to advanced technical content on Programming, AI, Cloud, and job-related topics.<br><br>We also provide premium learning resources and live mentoring sessions.<br><br><a href='/JobsforTechWhiz.github.io/page.html?slug=book-a-tutor' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
@@ -418,13 +417,13 @@
 
 {
   "keywords": [
-    "is this site indexed in google","site has good google ranking","Is content here good for SEO"
+    "site indexing","google ranking","good SEO"
   ],
   "answer": "This site is SEO-friendly,have good ranking in google.Pages r indexed.  "
 },
 {
   "keywords": [
-    "How to improve site indexing","SEO","Page indexing","seo","site ranking","improve google ranking for site","site hosting","page indexing","web crawling","sitemap","backlinks",
+    "How to improve site indexing","SEO","Page indexing","site ranking","improve google ranking for site","site hosting","page indexing","web crawling","sitemap","backlinks",
     "aso","pwa","custom domain","improve search index"
   ],
   "answer": "To improve site indexing , u need to have good ,text-heavy content on your site but avoid duplicate content.With good , high quality content will improve SEO which is Search Engine Optimization.Site SEO gets better with high page indexing, updated robot.txt require for automatic web crawling , updated sitemap.Site with primary domain generally have good SEO and r easily recognised by google.and continue posting on your site also 1 way to improve site indexing in google.To know more browse the web -<br><br><a href='www.google.com' target='_blank' class='chat-payment-link'>📚 Book a Live Class</a>"
