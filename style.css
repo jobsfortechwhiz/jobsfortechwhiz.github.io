@@ -719,48 +719,35 @@ table{
     border-collapse:collapse !important;
 
     background:#1a1a1a !important;
-    color:#ffffff !important;
+    color:#fff !important;
 
     border:1px solid #555 !important;
-    max-width:100% !important;
-
-    table-layout:fixed !important;
 
     margin:20px 0 !important;
+
+    /* IMPORTANT */
+    table-layout:auto !important;
 }
 
-table th{
-    background:#1d4ed8 !important;
-    color:#000 !important;
-
-    font-weight:700 !important;
-    padding:14px !important;
-
-    border:1px solid #666 !important;
-}
-
-table td{
-    color:#fff !important;
-    background:#222 !important;
-
-    padding:12px 14px !important;
-    border:1px solid #555 !important;
-
-    line-height:1.6 !important;
-}
 table th,
 table td{
-
-    padding:10px !important;
+    padding:12px !important;
 
     border:1px solid #555 !important;
 
-    white-space:normal !important;
-    word-break:break-word !important;
-    overflow-wrap:anywhere !important;
-
     vertical-align:top !important;
+
+    white-space:normal !important;
+
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
 }
+
+table td{
+    min-width:180px;
+     line-height:1.8 !important;
+}
+
 table tr:nth-child(even) td{
     background:#2b2b2b !important;
 }
@@ -768,7 +755,39 @@ table tr:nth-child(even) td{
 table tr:hover td{
     background:#333 !important;
 }
+table td p{
+    margin:6px 0 !important;
+}
+.post-content table,
+#page-content table,
+article table{
+    display:block;
+    overflow-x:auto;
+    width:100% !important;
+}
+table,
+table tbody,
+table tr,
+table td,
+table th{
+    width:auto !important;
+    min-width:0 !important;
+    max-width:none !important;
+}
 
+table td,
+table th{
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:anywhere !important;
+}
+
+table td *{
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:anywhere !important;
+    max-width:none !important;
+}
 div:has(> .sidebar):has(> .main){
     display:flex !important;
     flex-wrap:wrap !important;
