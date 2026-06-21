@@ -758,35 +758,27 @@ table tr:hover td{
 table td p{
     margin:6px 0 !important;
 }
-.post-content table,
-#page-content table,
-article table{
-    display:block;
-    overflow-x:auto;
-    width:100% !important;
-}
-table,
-table tbody,
-table tr,
-table td,
-table th{
+
+
+.boxes{
     width:auto !important;
-    min-width:0 !important;
-    max-width:none !important;
-}
+    min-width:300px !important;
+    max-width:100% !important;
 
-table td,
-table th{
-    white-space:normal !important;
-    word-break:normal !important;
-    overflow-wrap:anywhere !important;
-}
+    height:auto !important;
 
-table td *{
+    display:block !important;
+
     white-space:normal !important;
-    word-break:normal !important;
-    overflow-wrap:anywhere !important;
-    max-width:none !important;
+    word-break:break-word !important;
+}
+.containers .boxes{
+    width:auto !important;
+    min-width:300px !important;
+    max-width:100% !important;
+}
+div.boxes{
+    width:auto !important;
 }
 div:has(> .sidebar):has(> .main){
     display:flex !important;
