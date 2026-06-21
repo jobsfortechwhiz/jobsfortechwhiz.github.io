@@ -57,7 +57,7 @@
 },
 {
 "keywords":[
-"pdf","book","courses","learning material","booklet","guide"
+"pdf","book","courses","learning material","booklet","guide","blog","article","content","topics"
 ],
 
 "answer":
@@ -66,7 +66,8 @@
 {
 "keywords":[
 "english pdf","spoken course","soft skill course","verbal course","english speaking book","spoken pdf","conversational book",
-"spoken english pdf","soft skill training","spoken english course"
+"spoken english pdf","soft skill training","spoken english course","speaking course","language pdf",
+"language course","general english","english speaking","spoken english","english course"
 ],
 
 "answer":
@@ -75,6 +76,7 @@
 {
 "keywords":[
 "programming pdf","programming book","programming courses","technical content","Tech learning material","technical interview guide","programming interview pdf","Tech pdf","Tech courses"
+,"tech","tech blog","tech content","tech article","technical","code","coding","program","programming"
 ],
 
 "answer":
@@ -233,7 +235,7 @@
 },
  { "keywords": [
     "hr","managerial","hr interview questions","freshers basic interview questions","hr panel round","for fresher experienced candidates",
-    "hr search","company specific questions","general hr"
+    "hr search","company specific questions","general hr","fresher","experienced","entry level","professional"
   ],
   "answer": "we have list of 100 such questions to help learner with hr specific questions",
    "action":"category",
@@ -371,7 +373,7 @@
 },
 {
   "keywords": [
-    "email",
+    "email","mail","gmail","support",
     "contact email","customer support"
   ],
   "answer": "Please use the contact details provided on the website.For email support click here  Please use the contact details provided on the website.<br><br><a class=\"email-support-btn\" href=\"mailto:pnigam342@gmail.com?subject=Contact Support\" target=\"_blank\"><i class=\"fas fa-envelope\"></i> Email Support</a>"
@@ -400,6 +402,15 @@
   "compiler based","interpreter based","markup","tagged","command Line Languages"
   ],
   "answer": "We included certain languages like in <br>Programming Languages - Java ,PHP,JQuery(JS library),Spring Boot(Framework of Java)<br>Scripting Languages - PHP, JQuery(JS library)<br>Markup Languages - HTML<br>Command Line Languages - Git(Linux Based) , Unix<br><br>🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>  "
+}
+,
+{
+  "keywords": [
+    "good","unique","advance","friendly","ready","feature","special","easy","simple","simplified",
+    "modern","tech","exciting","excite","skill","help","interview","preparation","helpful","high",
+    "high quality","impressive","prepare"
+  ],
+  "answer": "This site has wide variety of topics to make you skilled and job ready.All blogs have very easy to understand explanation and also included quizzes to test your learning.Also included some paid content at a very nominal price for enhance learning experience.For any queries regarding quality of content ,or for any specific course preparation , u can use our contact page to connect with us.<br><a href='https://priyanka-nigam.github.io/JobsforTechWhiz.github.io/page.html?slug=contact-us' target='_blank' class='chat-payment-link'>Contact Here</a><br><br>🔍 For any technical query, use the Search Bar available at the top of this page. Enter keywords like Java, Spring Boot, Android, AI, Cloud, Interview Questions, etc.<br><br>📚 For advanced-level topics, visit: <a href=\"https://technologytalents.blogspot.com/\" target=\"_blank\" class=\"chat-payment-link\">Tech Blogs</a>  "
 }
 ,
 {
