@@ -15,14 +15,17 @@ async function loadPage() {
 
   if(slug === "quizlet") {
 
-     const res = await fetch(
-        `https://generate-quiz-ten.vercel.app/api/bloggerPage?slug=${slug}`
-     );
+    const res = await fetch(
+"https://generate-quiz-ten.vercel.app/api/bloggerFeed"
+);
 
-     const data = await res.json();
+console.log("STATUS", res.status);
 
-     console.log(data);
-     const entries = data.feed.entry;
+const text = await res.text();
+
+console.log("RAW RESPONSE", text);
+
+return;
   }
 
 }
