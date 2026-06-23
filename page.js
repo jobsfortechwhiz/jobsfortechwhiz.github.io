@@ -11,6 +11,7 @@ await fetch(
 `https://generate-quiz-ten.vercel.app/api/bloggerPage?slug=${slug}`
 );
 
+
 const html =
 await res.text();
 
