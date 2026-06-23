@@ -1,0 +1,243 @@
+
+ <script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+getFirestore,
+doc,
+getDoc
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyAOdRVwmg-Mtfvc2UennLCI-4V1VO5Nnoc",
+
+authDomain: "storequiz.firebaseapp.com",
+
+projectId: "storequiz",
+
+storageBucket: "storequiz.firebasestorage.app",
+
+messagingSenderId: "462730005071",
+
+appId: "1:462730005071:web:23d37871959ee5f4e8783a"
+
+};
+
+const app =
+initializeApp(firebaseConfig);
+
+const db =
+getFirestore(app);
+
+let quizData = null;
+
+/* GET DOCUMENT ID FROM URL */
+
+const quizId =
+new URLSearchParams(
+window.location.search
+).get("slug");
+
+console.log(
+"Quiz ID:",
+quizId
+);
+
+async function loadQuiz(){
+
+if(!quizId){
+
+document.body.innerHTML =
+"<h2>Quiz ID Missing</h2>";
+
+return;
+
+}
+
+try{
+
+const quizRef =
+doc(
+db,
+"quizzes",
+quizId
+);
+
+const snapshot =
+await getDoc(
+quizRef
+);
+
+console.log(
+"Document Exists:",
+snapshot.exists()
+);
+
+if(!snapshot.exists()){
+
+document.body.innerHTML =
+"<h2>Quiz Not Found</h2>";
+
+return;
+
+}
+
+quizData =
+snapshot.data();
+
+document.getElementById(
+"quizTitle"
+).textContent =
+quizId
+.replace(/-/g," ");
+
+let html = "";
+
+quizData.questions.forEach(
+function(q,index){
+
+html += `
+<div class="question">
+
+<h3>
+${index+1}.
+${q.question}
+</h3>
+`;
+
+q.options.forEach(
+function(option){
+
+html += `
+<label>
+
+<input
+type="radio"
+name="q${index}"
+value="${option}">
+
+${option}
+
+</label>
+
+<br>
+`;
+
+});
+
+html += "</div><hr>";
+
+});
+
+document.getElementById(
+"quizBox"
+).innerHTML =
+html;
+
+}
+catch(err){
+
+console.error(err);
+
+document.body.innerHTML =
+"<h2>Error Loading Quiz</h2>";
+
+}
+
+}
+
+window.submitQuiz = function(){
+console.log("SUBMIT CLICKED");
+let score = 0;
+
+quizData.questions.forEach(function(q,index){
+
+const selected =
+document.querySelector(
+`input[name="q${index}"]:checked`
+);
+
+const allOptions =
+document.querySelectorAll(
+`input[name="q${index}"]`
+);
+
+allOptions.forEach(function(radio){
+
+const label =
+radio.parentElement;
+
+radio.disabled = true;
+
+if(radio.value === q.answer){
+
+label.style.background =
+"#d4edda";
+
+label.style.border =
+"2px solid #28a745";
+
+if(
+!label.innerHTML.includes("✔")
+){
+label.innerHTML +=
+' <span style="float:right;font-weight:bold">✔ Correct</span>';
+}
+
+}
+
+if(
+selected &&
+radio.value === selected.value &&
+selected.value !== q.answer
+){
+
+label.style.background =
+"#f8d7da";
+
+label.style.border =
+"2px solid #dc3545";
+
+if(
+!label.innerHTML.includes("✘")
+){
+label.innerHTML +=
+' <span style="float:right;font-weight:bold">✘ Your Choice</span>';
+}
+
+}
+
+});
+
+if(
+selected &&
+selected.value === q.answer
+){
+score++;
+}
+
+});
+
+document.getElementById(
+"result"
+).textContent =
+`Score: ${score} / ${quizData.questions.length}`;
+
+};
+
+loadQuiz();
+
+</script> 
+<h1 id="quizTitle">Loading Quiz...</h1>
+
+<form id="quizBox"></form>
+
+<button onclick="submitQuiz()">
+Submit Quiz
+</button>
+
+<h2 id="result"></h2>

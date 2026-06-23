@@ -1,79 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta
-name="description"
-id="meta-description"
-content="">
-<title>Loading...</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
+    <title>Loading...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="favicon.png">
 <script src="js/book-tutor.js"></script>
 </head>
-
 <body>
-    
-<header class="site-header">
 
-    <a href="index.html" class="logo">
-       TechnicalMindSpace
-    </a>
+<header>
 
-    <nav>
-<div class="nav-left">
-        <a href="blogs.html">Home</a>
-       
-        <a href="blogs.html?group=java">Java</a>
-
-<a href="blogs.html?category=Cloud%20DevOps%20%7C%20GitOps%20interview%20questions">Cloud DevOps</a>
-<a href="blogs.html?category=PHP%20web%20development%20Questions">PHP</a>
-
-<a href="blogs.html?category=Technical%20interview%20questions">Technical</a>
-
-
-<a href="blogs.html?category=HR | Managerial interview%20Questions">HR|Managerial</a>
-<a href="/quiz_page.html?slug=quizlet">
-  Tech Quiz
-</a>
-<a href="page.html?slug=book-a-tutor">
-  Book Classes
-</a>
-</div>
-<div class="nav-right">
-<a href="#"
-   class="buy-nav"
-   onclick="openBuyDialog();return false;">
-   💳 Buy Now
-</a>
-<button id="theme-toggle">
-
-🌙 Dark Mode
-
-</button>
-</div>
-    </nav>
+<!-- same header as your site -->
 
 </header>
 
-<div class="post-nav">
+<div class="container">
+<div class="post-nav-buttons">
 
-<a href="blogs.html" class="back-btn">
-← Back to Home
+<button
+class="nav-btn"
+onclick="history.back()">
+← Back
+</button>
+
+<a
+href="index.html"
+class="nav-btn">
+🏠 Home
 </a>
 
 </div>
-<div id="post-content">
+<div id="page-content">
 Loading...
 </div>
-<h2 class="related-heading">
-Related Posts
-</h2>
 
-<div id="related-posts"></div>
-<script src="post.js"></script>
+</div>
 <div id="chatbot-container"></div>
 
 <link
@@ -108,7 +70,7 @@ fetch('/widget.html')
 });
 </script>
 
-
+<script src="test.js"></script> 
 
 <footer class="site-footer">
 
@@ -257,7 +219,9 @@ title="Site - interviewprepforinsiders">
 
 </footer>
  <link rel="stylesheet" href="footer.css">
-<script src="theme.js"></script>
+
+
 <script src="buy_now_dialog.js"></script>
+
 </body>
 </html>

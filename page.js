@@ -2,39 +2,11 @@ const slug =
 new URLSearchParams(
 window.location.search
 ).get("slug");
-/*if(slug === "quizlet"){
-   window.location.href =
-   "https://interviewprepforinsiders.blogspot.com/p/quizlet.html";
-} */
-async function loadPage() {
 
-  const slug =
-  new URLSearchParams(
-    window.location.search
-  ).get("slug");
 
-  if(slug === "quizlet") {
-
-    const res = await fetch(
-"https://generate-quiz-ten.vercel.app/api/bloggerFeed"
-);
-
-console.log("STATUS", res.status);
-
-const text = await res.text();
-
-console.log("RAW RESPONSE", text);
-
-return;
-  }
-
-}
-
-loadPage();
-
-document.getElementById(
-"pageContent"
-).innerHTML = html;
+// document.getElementById(
+// "pageContent"
+// ).innerHTML = html;
 function loadPage(data){
 data.feed.entry.forEach(item => {
 
@@ -48,6 +20,7 @@ data.feed.entry.forEach(item => {
     );
 
 });
+console.log("Current slug =", slug);
     const page =
     data.feed.entry.find(item=>{
 
@@ -56,11 +29,11 @@ data.feed.entry.forEach(item => {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g,"-")
         .replace(/^-|-$/g,"");
-
+console.log(pageSlug);
         return pageSlug === slug;
 
     });
-
+console.log("Found page =", page);
     if(!page){
 
         document.getElementById(
@@ -85,6 +58,7 @@ if(slug === "privacy-policy"){
     ); 
 
 }
+
 if(slug === "contact-us"){
 
 setTimeout(()=>{
@@ -295,3 +269,4 @@ window.submitAndPay = function(v, url){
 
   window.location.href = url;
 };
+
