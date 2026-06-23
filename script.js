@@ -107,6 +107,7 @@ post.title.$t
 .replace(/[^a-z0-9]+/g,"-")
 .replace(/^-|-$/g,"");
 
+
 document.getElementById(
     "post-content"
 ).innerHTML = `

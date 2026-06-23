@@ -2,7 +2,21 @@ const slug =
 new URLSearchParams(
 window.location.search
 ).get("slug");
+/*if(slug === "quizlet"){
+   window.location.href =
+   "https://interviewprepforinsiders.blogspot.com/p/quizlet.html";
+} */
+const res =
+await fetch(
+`https://generate-quiz-ten.vercel.app/api/bloggerPage?slug=${slug}`
+);
 
+const html =
+await res.text();
+
+document.getElementById(
+"pageContent"
+).innerHTML = html;
 function loadPage(data){
 data.feed.entry.forEach(item => {
 
