@@ -6,14 +6,27 @@ window.location.search
    window.location.href =
    "https://interviewprepforinsiders.blogspot.com/p/quizlet.html";
 } */
-const res =
-await fetch(
-`https://generate-quiz-ten.vercel.app/api/bloggerPage?slug=${slug}`
-);
+async function loadPage() {
 
+  const slug =
+  new URLSearchParams(
+    window.location.search
+  ).get("slug");
 
-const html =
-await res.text();
+  if(slug === "quizlet") {
+
+     const res = await fetch(
+       "https://generate-quiz-ten.vercel.app/api/bloggerFeed"
+     );
+
+     const data = await res.json();
+
+     console.log(data);
+  }
+
+}
+
+loadPage();
 
 document.getElementById(
 "pageContent"
