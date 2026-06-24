@@ -1,3 +1,5 @@
+
+
 const slug =
 new URLSearchParams(
 window.location.search
@@ -19,7 +21,11 @@ const res = await fetch(
 const data = await res.json();
 
 let html = `
-
+<input
+id="quizSearch"
+type="text"
+placeholder="Search quiz by title..."
+class="quiz-search">
 <div id="quiz-post-cards"></div>
 
 `;
@@ -51,18 +57,30 @@ postUrl
    ? post.category.map(c => c.term)
    : [];
 
-   if(
-   labels.includes(
-   "HR|Managerial interview Questions"
-   )
-   ){
-      return;
-   }
+    if (
+    labels.some(function(label){
+        return label.toLowerCase()
+        .includes("managerial interview questions");
+    })
+){
+    return;
+}
+const box =
+document.getElementById("quizSearch");
 
-   cards += `
+box.addEventListener("keyup", function(){
+
+console.log(
+"TYPING:",
+this.value
+);
+
+});
+ cards += `
 <div class="quiz-post-card"
      onclick="openQuiz(this)"
-     data-slug="${firestoreSlug}">
+     data-slug="${firestoreSlug}"
+     data-title="${title.toLowerCase()}">
 
    <span>${title}</span>
 
@@ -75,7 +93,30 @@ document.getElementById(
 "quiz-post-cards"
 ).innerHTML = cards;
 console.log(cards.length);
+// ----------search---------------
+document.getElementById("quizSearch")
+.addEventListener("input", function(){
+
+const search =
+this.value.toLowerCase().trim();
+
+document
+.querySelectorAll(".quiz-post-card")
+.forEach(card => {
+
+const text =
+card.getAttribute("data-title");
+
+card.style.display =
+text.includes(search)
+? "flex"
+: "none";
+
+});
+
+});
 }
+
 function openQuiz(card){
 
 const slug =
